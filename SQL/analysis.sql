@@ -1,34 +1,31 @@
-1. Загальна динаміка втрат техніки з початку війни
-sql
-Copy
+1. Overall dynamics of equipment losses since the beginning of the war
+    
 SELECT 
     date,
     day,
     (aircraft + helicopter + tank + APC + "field artillery" + MRL + "military auto" + "fuel tank" + drone) AS total_losses
 FROM russian_losses
 ORDER BY date;
-(Це можна візуалізувати як лінійний графік з фільтрами за типами техніки.)
 
-5. Середньодобова кількість знищених літаків/гелікоптерів
-sql
-Copy
+
+2. Average daily number of aircraft/helicopters destroyed
+
 SELECT 
     AVG(aircraft) AS avg_aircraft_per_day,
     AVG(helicopter) AS avg_helicopters_per_day
 FROM russian_losses;
-(Можна додати breakdown по місяцях.)
 
-6. Чи є кореляція між втратами танків та ББМ (APC)?
-sql
-Copy
+
+3. Is there a correlation between tank and APC losses?
+
 SELECT 
     CORR(tank, APC) AS tank_apc_correlation
 FROM russian_losses;
 (Якщо кореляція близька до 1, це означає, що танки і ББМ часто гинуть разом у боях.)
 
-7. Дні з аномально високими втратами (наприклад, топ-5 днів за танками)
-sql
-Copy
+    
+4. Days with abnormally high losses (e.g. top 5 days by tanks)
+
 SELECT 
     date,
     tank AS tanks_destroyed
@@ -37,9 +34,9 @@ ORDER BY tank DESC
 LIMIT 5;
 (Аналогічно можна зробити для інших видів техніки.)
 
-8. Динаміка втрат дронів з часом (наприклад, по місяцях)
-sql
-Copy
+    
+5. Dynamics of drone losses over time ( by month)
+
 SELECT 
     EXTRACT(YEAR FROM date) AS year,
     EXTRACT(MONTH FROM date) AS month,
@@ -49,20 +46,20 @@ GROUP BY year, month
 ORDER BY year, month;
 (Можна побудувати графік зростання/спаду.)
 
-9. Чи є тижнева залежність втрат (наприклад, більше втрат у вихідні)?
-sql
-Copy
+    
+6. Is there a weekly pattern of losses 
+
 SELECT 
-    EXTRACT(DOW FROM date) AS day_of_week, -- 0=неділя, 1=понеділок...
+    EXTRACT(DOW FROM date) AS day_of_week, 
     AVG(tank + APC + "field artillery") AS avg_armor_losses
 FROM russian_losses
 GROUP BY day_of_week
 ORDER BY day_of_week;
 (Якщо середні втрати вищі у дні 0 або 6 (вихідні), це може свідчити про активність.)
 
-10. Співвідношення втрат танків vs ББМ (APC)
-sql
-Copy
+    
+7. Tank vs APC Loss Ratio
+
 SELECT 
     SUM(tank) AS total_tanks_destroyed,
     SUM(APC) AS total_apcs_destroyed,
@@ -71,9 +68,8 @@ SELECT
 FROM russian_losses;
 (Можна зробити кругову діаграму.)
 
-12. Зміна структури втрат (наприклад, літаки vs дрони)
-sql
-Copy
+8. Changing loss structure ( airplanes vs. drones)
+
 SELECT 
     EXTRACT(YEAR FROM date) AS year,
     EXTRACT(MONTH FROM date) AS month,
@@ -85,9 +81,8 @@ GROUP BY year, month
 ORDER BY year, month;
 (Тут можна побачити, чи зростає роль дронів з часом.)
 
-14. Чи збільшення втрат паливних цистерн пов'язане з наступами?
-sql
-Copy
+9. Is the increase in fuel tank losses related to the offensives?
+
 SELECT 
     date,
     "fuel tank" AS fuel_tanks_destroyed,
@@ -95,11 +90,10 @@ SELECT
 FROM russian_losses
 ORDER BY "fuel tank" DESC
 LIMIT 10;
-(Якщо в дні з великими втратами цистерн також багато втрат техніки, це може свідчити про наступ.)
+(If on days with high tank losses there are also many losses of equipment, this may indicate an offensive.)
 
-15.Загальна кількість знищеної техніки за весь час
-sql
-Copy
+15.Total number of destroyed equipment for all time (aircraft,helicopter,tank,APC,field artillery,fuel tank,drone)
+
 SELECT 
     SUM(aircraft) AS total_aircraft,
     SUM(helicopter) AS total_helicopters,
