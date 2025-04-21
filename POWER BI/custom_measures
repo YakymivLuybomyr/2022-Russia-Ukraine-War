@@ -1,1 +1,139 @@
-
+daily losses of everything = 
+VAR currentDate = SELECTEDVALUE('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[aircraft]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = 
+    CALCULATE(
+        SUM('russia_losses_equipment'[aircraft]),
+        FILTER(
+            'russia_losses_equipment',
+            'russia_losses_equipment'[date] = currentDate - 1
+        )
+    )
+RETURN
+    IF(ISBLANK(currentValue) || ISBLANK(previousValue), BLANK(), currentValue - previousValue)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+daily losses Artillery = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[field artillery]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[field artillery]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+daily losses APC = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[APC]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[APC]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ daily losses helicopter = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[helicopter]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[helicopter]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+daily losses drone = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[drone]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[drone]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ daily losses aircraft =  
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[aircraft]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[aircraft]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+daily losses MRL = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM('russia_losses_equipment'[MRL]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM('russia_losses_equipment'[MRL]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+daily losses tank = 
+VAR currentDate = MAX('russia_losses_equipment'[date])
+VAR currentValue = CALCULATE(SUM(russia_losses_equipment[tank]), 'russia_losses_equipment'[date] = currentDate)
+VAR previousValue = CALCULATE(SUM(russia_losses_equipment[tank]), FILTER('russia_losses_equipment', 'russia_losses_equipment'[date] = currentDate - 1))
+RETURN currentValue - previousValue
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Losses = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(MAX('russia_losses_equipment'[tank]), 'russia_losses_equipment'[date] = MaxDate) +
+    CALCULATE(MAX('russia_losses_equipment'[APC]), 'russia_losses_equipment'[date] = MaxDate) +
+    CALCULATE(MAX('russia_losses_equipment'[field artillery]), 'russia_losses_equipment'[date] = MaxDate)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Aircraft = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[aircraft]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+total_APC = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[APC]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Artillery = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[field artillery]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Drones = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[drone]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Helicopters = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[helicopter]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_MRL = 
+VAR MaxDate = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[MRL]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = MaxDate
+        )
+    )
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total_Tanks = 
+VAR Last_Date = MAX('russia_losses_equipment'[date])
+RETURN
+    CALCULATE(
+        MAX('russia_losses_equipment'[tank]),
+        FILTER(
+            ALL('russia_losses_equipment'),
+            'russia_losses_equipment'[date] = Last_Date
+        )
+    )
