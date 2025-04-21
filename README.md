@@ -48,6 +48,8 @@ APC losses peaked in 2023 – likely due to increased effectiveness of Ukrainian
 The data reflects both intensified operational tempo and increased battlefield lethality.
 
 📌 DASHBOARD 3 — EQUIPMENT LOSS TIMELINE
+
+![Image alt](https://github.com/YakymivLuybomyr/2022-Russia-Ukraine-War/blob/main/DATA/WAR%202022%20dashboard%203.png)
 🧩 Dashboard Title: Loss Trends Across Time (2022–2025)
 📍 What’s Included:
 Timeline visualization of losses across:
