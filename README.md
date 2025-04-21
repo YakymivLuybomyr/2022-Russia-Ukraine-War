@@ -1,65 +1,76 @@
-📊 Analytical Report: Dashboard Insights of Russian Equipment Losses (2022–2025)
+📌 DASHBOARD 1 — OVERVIEW OF TOTAL LOSSES
 ![Image alt](https://github.com/YakymivLuybomyr/2022-Russia-Ukraine-War/blob/main/DATA/WAR%202022%20dashboard%201.png)
-Purpose:
-This dashboard presents a comprehensive summary of Russia’s military equipment losses throughout the full-scale war in Ukraine.
+🧩 Dashboard Title: General Overview of Military Losses
+📅 Period Covered: Feb 25, 2022 – Apr 13, 2025
+🗓️ Total War Days: 1145
 
-What it shows:
+📍 What’s Included:
+Total losses by year and category.
 
-Number of days of war: 1145 (as of April 13, 2025).
+Share of each equipment type (% of total).
 
-Total losses by category: drones, artillery, armored vehicles, tanks, aircraft, helicopters, MLRS.
+Average daily losses.
+
+Loss hierarchy (most to least lost).
+
+📊 Main Insights:
+Drones (UAVs) dominate total losses – over 34% of all confirmed cases.
+
+Artillery and armored vehicles (APCs) are next, indicating Russia's reliance on mobile and ranged firepower.
+
+2023 marks the heaviest year in losses, particularly in drones and vehicles.
+
+Aircraft and helicopters show limited usage or improved survivability.
+
+📌 DASHBOARD 2 — EQUIPMENT-SPECIFIC INSIGHTS
+🧩 Dashboard Title: Detailed Equipment Losses – Drones, Artillery, APCs
+📍 What’s Included:
+Yearly and quarterly total losses for:
+
+🛸 Drones
+
+💣 Artillery
+
+🚛 Armored Personnel Carriers (APC)
 
 Average daily losses by year.
 
-Percentage contribution of each equipment type to the total losses.
+📊 Main Insights:
+Drones saw a dramatic rise in 2023 and remained heavily used into 2025.
 
-A hierarchical view of the most to least affected categories.
+Artillery losses were steady, showing reliance on indirect firepower.
 
-Insights:
+APC losses peaked in 2023 – likely due to increased effectiveness of Ukrainian AT weaponry.
 
-Drones are the most heavily affected category, accounting for over 34% of all losses.
+The data reflects both intensified operational tempo and increased battlefield lethality.
 
-Artillery and armored vehicles follow as the next most significant losses.
+📌 DASHBOARD 3 — EQUIPMENT LOSS TIMELINE
+🧩 Dashboard Title: Loss Trends Across Time (2022–2025)
+📍 What’s Included:
+Timeline visualization of losses across:
 
-Losses peaked in 2023 across most equipment types, indicating intense warfare during that year.
+🛸 Drones
 
-Aircraft and helicopters remain the least affected, with only marginal figures compared to ground assets.
+💣 Artillery
 
-🖼️ Image 2: Equipment-Specific Dashboards – Drones, Artillery, APCs
-Purpose:
-This dashboard offers focused analyses for the top three categories of Russian military losses: drones, artillery systems, and armored personnel carriers (APCs).
+🚛 APCs
 
-What it shows:
+✈️ Aircraft
 
-Yearly total losses from 2022 to 2025.
+🛡️ Tanks
 
-Quarterly breakdown of losses for trend tracking.
+🚀 MLRS
 
-Average daily losses per year per equipment type.
+Monthly and quarterly breakdowns.
 
-Insights:
+Year-over-year intensity comparison.
 
-Drone losses show exponential growth in 2023, remaining high through 2024 and early 2025. This underlines the central role of UAVs in Russian operations and the corresponding vulnerability to Ukrainian countermeasures.
+📊 Main Insights:
+Mid-2023 experienced synchronized peaks across all major equipment types.
 
-Artillery systems experienced steady and significant attrition, reflecting their central role in Russia’s battlefield strategy.
+Losses spike in spring and summer, aligned with active military campaigns.
 
-APC losses peaked in 2023, likely due to increased Ukrainian use of portable anti-armor weapons. Their losses taper slightly in 2024–2025.
+2025 shows a flattening trend, which could indicate operational exhaustion or strategic restraint.
 
-🖼️ Image 3: Timeline Analysis of Equipment Losses
-Purpose:
-To visualize synchronized loss patterns for all major equipment types over time.
 
-What it shows:
-
-Monthly and quarterly loss trends across categories (drones, artillery, APCs, aircraft, tanks, MRL).
-
-Longitudinal comparison of intensity from 2022 to 2025.
-
-Insights:
-
-The highest spike in losses occurred in mid-2023, consistent across drones, artillery, and vehicles.
-
-Seasonal cycles are evident — particularly losses concentrated in spring and summer quarters, likely reflecting operational offensives.
-
-By early 2025, the intensity of losses appears to plateau, potentially signaling strategic recalibration or depleted resources on the Russian side.
 
