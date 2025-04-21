@@ -23,6 +23,8 @@ Artillery and armored vehicles (APCs) are next, indicating Russia's reliance on 
 
 Aircraft and helicopters show limited usage or improved survivability.
 
+
+
 📌 DASHBOARD 2 — EQUIPMENT-SPECIFIC INSIGHTS
 
 ![Image alt](https://github.com/YakymivLuybomyr/2022-Russia-Ukraine-War/blob/main/DATA/WAR%202022%20dashboard%202.png)
@@ -46,6 +48,9 @@ Artillery losses were steady, showing reliance on indirect firepower.
 APC losses peaked in 2023 – likely due to increased effectiveness of Ukrainian AT weaponry.
 
 The data reflects both intensified operational tempo and increased battlefield lethality.
+
+
+
 
 📌 DASHBOARD 3 — EQUIPMENT LOSS TIMELINE
 
