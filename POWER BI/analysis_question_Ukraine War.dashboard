@@ -1,9 +1,116 @@
-1. Дашборд: Загальна динаміка втрат техніки з початку війни
-Мета
-Візуалізувати загальну кількість знищеної техніки по днях, щоб побачити:
+📘 ANALYTICAL REPORT: Russian Equipment Losses During the War Against Ukraine
+Based on Power BI Dashboard (2022–2025)
 
-Загальний тренд (зростання/спад).
+🔹 1. General Dashboard Overview
+Purpose:
+To provide a comprehensive overview of Russian military equipment losses during the full-scale invasion of Ukraine from 2022 to April 2025.
 
-Дні з аномально високими втратами.
+What it shows:
+1.The total number of war days.
 
-Ключові події (наприклад, контрнаступи, масовані удари).
+2.Total losses by equipment category: drones, armored vehicles (APCs), artillery, tanks, aircraft, helicopters, MLRS (multiple rocket launchers), and fuel transport.
+
+3.Annual loss figures and their share in overall losses.
+
+4.Yearly average daily losses.
+
+5.Hierarchical structure of losses (most to least lost equipment).
+
+6.Percentage distribution of each category from total confirmed losses.
+
+Key insights:
+
+1.Drones account for the highest share of total losses (over 34%), followed by armored vehicles and artillery systems.
+
+2.2023 marks the peak year in terms of total equipment loss, across nearly all categories.
+
+3.The average daily losses show a significant increase in 2023, then a moderate drop in 2024 and early 2025, possibly due to depletion of resources or a change in operational tactics.
+
+4.The smallest share of losses comes from aircraft and helicopters, suggesting either fewer deployments or more efficient protection measures.
+
+5.The data reflects the shift of the Russian military from conventional heavy equipment toward unmanned and mobile platforms (e.g., drones and light vehicles).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Drones Dashboard
+
+Purpose:
+To present a detailed analysis of Russian drone losses across years and quarters.
+
+What it shows:
+
+1.Total yearly drone losses from 2022 to 2025.
+
+2.Quarterly drone loss trends.
+
+3.Average daily losses per year.
+
+Key insights:
+
+1.Drone losses increased drastically in 2023, aligning with the intensified use of UAVs for reconnaissance, kamikaze strikes, and electronic warfare.
+
+2.In 2024, the losses remain high but slightly lower than 2023, suggesting better drone tactics or improved counter-drone measures by Ukraine.
+
+3.The sustained level in 2025 indicates that drones remain central to Russia’s tactical strategy, despite high attrition.
+
+4.Quarterly data reveals spikes in drone losses during spring and summer months, correlating with major offensive operations.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Artillery Dashboard
+
+Purpose:
+To track the dynamics of Russian artillery equipment losses.
+
+What it shows:
+
+1.Total annual and quarterly losses in artillery systems.
+
+2.Daily average losses for each year.
+
+Key insights:
+
+1.Artillery losses are consistently high, especially in 2022 and 2023, reflecting its heavy use in prolonged bombardments and siege tactics.
+
+2.The drop in artillery losses in 2025 may suggest a shift toward more mobile or long-range alternatives like guided missiles.
+
+3.The data indicates that artillery continues to play a foundational role in Russian ground warfare strategy, despite heavy losses and increased drone reliance.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Armored Vehicles (APC) Dashboard
+
+Purpose:
+To analyze losses in Russian armored personnel carriers (APCs) used for troop movement and protection.
+
+What it shows:
+
+1.Total APC losses each year and by quarter.
+
+2.Average daily APC losses.
+
+Key insights:
+
+1.APC losses saw a sharp increase in 2023, which matches Ukraine's increased use of anti-armor systems (e.g., Javelins, drones with ATGMs).
+
+2.The lower losses in 2025 may be a result of reduced large-scale troop movements or better tactical concealment.
+
+3.The data reflects how vulnerable armored mobility has become in modern warfare due to the proliferation of portable anti-armor technology.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. Combined Equipment Timeline
+Purpose:
+To visualize time-based loss trends across all major equipment categories in one synchronized view.
+
+What it shows:
+
+1.Equipment losses by month and quarter from 2022 through early 2025.
+
+2.Comparative curves for drones, artillery, APCs, tanks, aircraft, and MLRS.
+
+Key insights:
+
+1.There is a clear seasonal pattern, with elevated losses in spring and summer, matching known periods of Ukrainian counteroffensives.
+
+2.Drones and armored vehicles dominate the total losses curve.
+
+3.The flattening of loss rates in 2025 may reflect battlefield stagnation or strategic redeployments.
+
+4.This dashboard highlights the shift in combat dynamics, with traditional heavy equipment still present but increasingly supplemented by drones and light units.
