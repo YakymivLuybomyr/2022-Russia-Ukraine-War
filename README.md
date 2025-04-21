@@ -1,4 +1,5 @@
 📌 DASHBOARD 1 — OVERVIEW OF TOTAL LOSSES
+
 ![Image alt](https://github.com/YakymivLuybomyr/2022-Russia-Ukraine-War/blob/main/DATA/WAR%202022%20dashboard%201.png)
 🧩 Dashboard Title: General Overview of Military Losses
 📅 Period Covered: Feb 25, 2022 – Apr 13, 2025
@@ -23,6 +24,8 @@ Artillery and armored vehicles (APCs) are next, indicating Russia's reliance on 
 Aircraft and helicopters show limited usage or improved survivability.
 
 📌 DASHBOARD 2 — EQUIPMENT-SPECIFIC INSIGHTS
+
+![Image alt](https://github.com/YakymivLuybomyr/2022-Russia-Ukraine-War/blob/main/DATA/WAR%202022%20dashboard%202.png)
 🧩 Dashboard Title: Detailed Equipment Losses – Drones, Artillery, APCs
 📍 What’s Included:
 Yearly and quarterly total losses for:
