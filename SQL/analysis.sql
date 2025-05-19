@@ -5,7 +5,7 @@ SELECT
     day,
     (aircraft + helicopter + tank + APC + "field artillery" + MRL + "military auto" + "fuel tank" + drone) AS total_losses
 FROM russian_losses
-ORDER BY date;
+ORDER BY date
 
 
 2. Average daily number of aircraft/helicopters destroyed
@@ -102,6 +102,9 @@ SELECT
     SUM("field artillery") AS total_artillery,
     SUM(MRL) AS total_mlrs,
     SUM("military auto") AS total_military_vehicles,
+
+
+    
     SUM("fuel tank") AS total_fuel_tanks,
     SUM(drone) AS total_drones
 FROM russian_losses;
